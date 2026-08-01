@@ -1,0 +1,26 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: internal-mcp-server
+  ai:
+    mcp:
+      server:
+        name: internal-mcp-server
+        version: 0.1.0
+        type: SYNC
+        protocol: STREAMABLE
+        streamable-http:
+          mcp-endpoint: /mcp
+        annotation-scanner:
+          enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
