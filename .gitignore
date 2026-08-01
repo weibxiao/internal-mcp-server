@@ -1,3 +1,10 @@
 target/
 .idea/
 *.iml
+.settings
+.classpath
+.project
+.tunnel-client.sh
+.classpath
+.project
+.tunnel-client.sh
