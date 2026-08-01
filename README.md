@@ -49,7 +49,7 @@ docker run --rm -p 8080:8080 internal-mcp-server:0.1.0
 1) Install ngrok, by brew install --cask ngrok
 2) Register an account in ngrok and create a token in ngrok account
 3) Run ngrok config add-authtoken <the token created in ngrok account>
-4) Run ngrok http <server port>, which is the server port of you MCP server
+4) Run ngrok http "server port" (ex: ngrok http 8080), which is the server port of you MCP server
    You will see https://overlook-kitten-primate.ngrok-free.dev -> http://localhost:8080, which first url will be used to setup
    MCP server in ChatGPT
 5) Enable developer mode in ChatGPT
