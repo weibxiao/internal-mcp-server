@@ -7,4 +7,4 @@ target/
 .tunnel-client.sh
 .classpath
 .project
-.tunnel-client.sh
+tunnel-client.sh

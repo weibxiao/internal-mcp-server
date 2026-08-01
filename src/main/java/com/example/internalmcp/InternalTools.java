@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.springframework.ai.mcp.annotation.McpResource;
 import org.springframework.ai.mcp.annotation.McpTool;
 import org.springframework.ai.mcp.annotation.McpToolParam;
@@ -57,6 +59,12 @@ public class InternalTools {
             throw new IllegalArgumentException("unitPrice must be greater than zero");
         }
         return store.createOrder(customerId, sku.trim(), quantity, unitPrice);
+    }
+    
+    @McpTool(name="get_orders_by_customer", description="search cutomer's orders by customer id")
+    public List<Order> getOrdersByCustomerId(String customerId) {
+    	List<Order> list = store.orders();
+    	return list.stream().filter(order -> order.customerId().equals(customerId)).collect(Collectors.toList());
     }
 
     @McpTool(name = "run_health_check", description = "Run a non-invasive service health check. It does not reveal secrets or infrastructure addresses.")

@@ -45,6 +45,19 @@ docker run --rm -p 8080:8080 internal-mcp-server:0.1.0
     
 5. Put above URL into the browser, you can verify the tools in your MCP server.
 
+## Test local deployment for MCP server (Mac)
+1) Install ngrok, by brew install --cask ngrok
+2) Register an account in ngrok and create a token in ngrok account
+3) Run ngrok config add-authtoken <the token created in ngrok account>
+4) Run ngrok http <server port>, which is the server port of you MCP server
+   You will see https://overlook-kitten-primate.ngrok-free.dev -> http://localhost:8080, which first url will be used to setup
+   MCP server in ChatGPT
+5) Enable developer mode in ChatGPT
+6) Go to Plugins in ChatGPT, click + symbol to add MCP server locally
+7) Use first URL as connection string with your MCP server endpoint.
+8) Create new chat, using this MCP to verify the functions provided by this MCP server
+9) ChatGP seems caching MCP server. Sometimes it needs to be deleted and re-installed to see new features.
+
 ## Connect it to ChatGPT
 
 1. Deploy the container to a host with a public HTTPS URL (for example Cloud Run, AWS App Runner, Render, or Azure Container Apps).

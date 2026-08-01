@@ -42,7 +42,7 @@ public class InternalStore {
         return order;
     }
 
-    public Collection<Order> orders() {
+    public List<Order> orders() {
         return List.copyOf(orders.values());
     }
 }
