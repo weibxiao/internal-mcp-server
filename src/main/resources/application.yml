@@ -24,3 +24,16 @@ management:
     health:
       probes:
         enabled: true
+
+#logging:
+ # level:
+  #  root: INFO
+    
+    # Enable DEBUG logging for the core MCP transport layer
+logging:
+   level:
+      io.modelcontextprotocol.spec: TRACE
+      io.modelcontextprotocol.client: TRACE
+      io.modelcontextprotocol.client.transport: TRACE
+      org.springframework.ai.mcp: TRACE
+ 
