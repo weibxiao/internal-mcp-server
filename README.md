@@ -58,6 +58,8 @@ docker run --rm -p 8080:8080 internal-mcp-server:0.1.0
 8) Create new chat, using this MCP to verify the functions provided by this MCP server
 9) ChatGP seems caching MCP server. Sometimes it needs to be deleted and re-installed to see new features.
 
+YouTue link https://www.youtube.com/watch?v=DMO_0b5_rS0 for demo the test process.
+
 To test it in Claude, run step 4. Add connectors under the setting by the mapping URL, not the URL with Localhost. 
 
 ## Connect it to ChatGPT
